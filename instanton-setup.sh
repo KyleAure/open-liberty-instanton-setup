@@ -9,7 +9,8 @@ do
 done
 
 if [ -z "$JAVA_IMAGE" ]; then
-  echo "Must specify -j for the URL to the J9 CRIU support java image"
+  echo "Must specify -j for the URL to the J9 CRIU support java image."
+  echo "For example, a nightly build from https://openj9-artifactory.osuosl.org/artifactory/ci-openj9/Build_JDK11_x86-64_linux_criu_Nightly/"
   exit 1
 fi
 
