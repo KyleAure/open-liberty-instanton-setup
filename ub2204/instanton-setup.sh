@@ -18,10 +18,11 @@ fi
 apt-get update
 apt-get install -y git docker.io podman maven make gcc automake ant asciidoc xmlto libprotobuf-dev libprotobuf-c-dev protobuf-c-compiler protobuf-compiler python3-protobuf pkg-config libbsd-dev iproute2 libnftables-dev libcap-dev libnl-3-dev libnet1-dev libaio-dev libgnutls28-dev python3-future
 
-git clone -b instanton https://github.com/ymanton/criu.git;
+git clone -b march_ea_23 https://github.com/ibmruntimes/criu.git;
 cd criu;
-git reset --hard 41c4061e1b14a8c6ff676906026c1652870fc5c3;
+git reset --hard 442cc1ca2168940d05ac087359777bf4e9b65c2b;
 make install;
+
 
 mkdir -p /etc/ld.so.conf.d/;
 echo /usr/local/lib64 > /etc/ld.so.conf.d/criu.conf; \

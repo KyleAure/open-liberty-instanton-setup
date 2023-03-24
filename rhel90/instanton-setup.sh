@@ -19,9 +19,9 @@ subscription-manager repos --enable codeready-builder-for-rhel-9-x86_64-rpms;
 
 dnf install -y git podman maven glibc-locale-source make automake gcc gcc-c++ kernel-devel asciidoc git vim protobuf protobuf-c protobuf-c-devel protobuf-compiler protobuf-devel nftables libcap-devel libnet-devel libnl3-devel pkg-config xmlto libcap python3 python3-protobuf ant ant-junit ant-junit5;
 
-git clone -b instanton https://github.com/ymanton/criu.git;
+git clone -b march_ea_23 https://github.com/ibmruntimes/criu.git;
 cd criu;
-git reset --hard 41c4061e1b14a8c6ff676906026c1652870fc5c3;
+git reset --hard 442cc1ca2168940d05ac087359777bf4e9b65c2b;
 make install;
 
 mkdir -p /etc/ld.so.conf.d/;
