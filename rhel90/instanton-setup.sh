@@ -10,7 +10,7 @@ done
 
 if [ -z "$JAVA_IMAGE" ]; then
   echo "Must specify -j for the URL to the J9 CRIU support java image."
-  echo "For example, a nightly build from https://openj9-artifactory.osuosl.org/artifactory/ci-openj9/Build_JDK11_x86-64_linux_criu_Nightly/"
+  echo "For example, a nightly build from https://openj9-artifactory.osuosl.org/artifactory/ci-openj9/Build_JDK11_x86-64_linux_criu_Nightly/ or release from https://developer.ibm.com/languages/java/semeru-runtimes/downloads/ like https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.8.1%2B1_openj9-0.40.0/ibm-semeru-open-jdk_x64_linux_17.0.8.1_1_openj9-0.40.0.tar.gz"
   exit 1
 fi
 
@@ -19,9 +19,8 @@ subscription-manager repos --enable codeready-builder-for-rhel-9-x86_64-rpms;
 
 dnf install -y git podman maven glibc-locale-source make automake gcc gcc-c++ kernel-devel asciidoc git vim protobuf protobuf-c protobuf-c-devel protobuf-compiler protobuf-devel nftables libcap-devel libnet-devel libnl3-devel pkg-config xmlto libcap python3 python3-protobuf ant ant-junit ant-junit5;
 
-git clone -b march_ea_23 https://github.com/ibmruntimes/criu.git;
+git clone -b 0.40.1-release https://github.com/ibmruntimes/criu.git;
 cd criu;
-git reset --hard 442cc1ca2168940d05ac087359777bf4e9b65c2b;
 make install;
 
 mkdir -p /etc/ld.so.conf.d/;
