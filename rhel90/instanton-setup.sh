@@ -17,7 +17,9 @@ fi
 # Install requird CRIU for InstantOn
 subscription-manager repos --enable codeready-builder-for-rhel-9-x86_64-rpms;
 
-dnf install -y git podman maven glibc-locale-source make automake gcc gcc-c++ kernel-devel asciidoc git vim protobuf protobuf-c protobuf-c-devel protobuf-compiler protobuf-devel nftables libcap-devel libnet-devel libnl3-devel pkg-config xmlto libcap python3 python3-protobuf ant ant-junit ant-junit5;
+dnf install -y git podman maven glibc-locale-source make automake gcc gcc-c++ kernel-devel asciidoc git vim protobuf protobuf-c protobuf-c-devel protobuf-compiler protobuf-devel nftables libcap-devel libnet-devel libnl3-devel pkg-config xmlto libcap python3 python3-protobuf python3-pip ant ant-junit ant-junit5;
+
+pip install importlib-metadata
 
 git clone -b 0.40.1-release https://github.com/ibmruntimes/criu.git;
 cd criu;
