@@ -10,7 +10,7 @@ done
 
 if [ -z "$JAVA_IMAGE" ]; then
   echo "Must specify -j for the URL to the J9 CRIU support java image."
-  echo "For example, a nightly build from https://openj9-artifactory.osuosl.org/artifactory/ci-openj9/Build_JDK11_x86-64_linux_criu_Nightly/ or release from https://developer.ibm.com/languages/java/semeru-runtimes/downloads/ like https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.8.1%2B1_openj9-0.40.0/ibm-semeru-open-jdk_x64_linux_17.0.8.1_1_openj9-0.40.0.tar.gz"
+  echo "For example, a nightly build from https://openj9-artifactory.osuosl.org/artifactory/ci-openj9/Build_JDK11_x86-64_linux_criu_Nightly/ or release from https://developer.ibm.com/languages/java/semeru-runtimes/downloads/ like https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.1%2B12_openj9-0.42.0/ibm-semeru-open-jdk_x64_linux_21.0.1_12_openj9-0.42.0.tar.gz"
   exit 1
 fi
 
@@ -21,7 +21,7 @@ dnf install -y git podman maven glibc-locale-source make automake gcc gcc-c++ ke
 
 pip install importlib-metadata
 
-git clone -b 0.40.1-release https://github.com/ibmruntimes/criu.git;
+git clone -b 0.43.0-release https://github.com/ibmruntimes/criu.git;
 cd criu;
 make install;
 
