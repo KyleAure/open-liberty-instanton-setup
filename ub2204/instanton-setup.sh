@@ -18,7 +18,7 @@ add-apt-repository -y universe
 add-apt-repository -y multiverse
 add-apt-repository -y restricted
 apt-get update
-apt-get install make gcc automake asciidoc xmlto libprotobuf-dev libprotobuf-c-dev protobuf-c-compiler    protobuf-compiler python3-protobuf pkg-config libbsd-dev iproute2 libnftables-dev libcap-dev libnl-3-dev      libnet1-dev libaio-dev libgnutls28-dev python3-future python3-pip
+apt-get install -y make gcc automake asciidoc xmlto libprotobuf-dev libprotobuf-c-dev protobuf-c-compiler    protobuf-compiler python3-protobuf pkg-config libbsd-dev iproute2 libnftables-dev libcap-dev libnl-3-dev      libnet1-dev libaio-dev libgnutls28-dev python3-future python3-pip
 
 git clone -b 0.43.0-release https://github.com/ibmruntimes/criu.git;
 cd criu;
