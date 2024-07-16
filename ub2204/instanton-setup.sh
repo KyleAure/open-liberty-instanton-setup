@@ -47,6 +47,9 @@ echo "JAVA_HOME=/opt/java/openjdk" >> /etc/environment
 update-alternatives --install /usr/bin/java java /opt/java/openjdk/bin/java 2
 update-alternatives --set java /opt/java/openjdk/bin/java
 
+# Install ant to execute buildandrun
+apt-get install -y ant
+
 # clone and build latest open-liberty and run checkpoint fat
 git clone https://github.com/OpenLiberty/open-liberty.git
 cd open-liberty/dev
