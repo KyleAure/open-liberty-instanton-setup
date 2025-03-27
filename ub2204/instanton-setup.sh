@@ -10,7 +10,7 @@ done
 
 if [ -z "$JAVA_IMAGE" ]; then
   echo "Must specify -j for the URL to the J9 CRIU support java image."
-  echo "For example, a nightly build from https://openj9-artifactory.osuosl.org/artifactory/ci-openj9/Build_JDK11_x86-64_linux_criu_Nightly/ or release from https://developer.ibm.com/languages/java/semeru-runtimes/downloads/ like https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.1%2B12_openj9-0.42.0/ibm-semeru-open-jdk_x64_linux_21.0.1_12_openj9-0.42.0.tar.gz"
+  echo "For example, a nightly build from https://openj9-artifactory.osuosl.org/artifactory/ci-openj9/Build_JDK11_x86-64_linux_criu_Nightly/ or release from https://developer.ibm.com/languages/java/semeru-runtimes/downloads/ like https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.6%2B7_openj9-0.49.0/ibm-semeru-open-jdk_x64_linux_21.0.6_7_openj9-0.49.0.tar.gz"
   exit 1
 fi
 
@@ -20,7 +20,7 @@ add-apt-repository -y restricted
 apt-get update
 apt-get install -y make gcc automake asciidoc xmlto libprotobuf-dev libprotobuf-c-dev protobuf-c-compiler    protobuf-compiler python3-protobuf pkg-config libbsd-dev iproute2 libnftables-dev libcap-dev libnl-3-dev      libnet1-dev libaio-dev libgnutls28-dev python3-future python3-pip
 
-git clone -b 0.43.0-release https://github.com/ibmruntimes/criu.git;
+git clone -b 0.45.0-release https://github.com/ibmruntimes/criu.git;
 cd criu;
 make install;
 
